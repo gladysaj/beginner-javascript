@@ -14,3 +14,12 @@ const html = `
 </div>
 `;
 document.body.innerHTML = html;
+
+// Numbers 
+const smarties = 20;
+const kids = 3;
+const eachKidGets = smarties / kids;
+const result = Math.floor(eachKidGets);
+console.log(result);
+
+const smartiesLeft = smarties % kids; // this will be the modulus op with 2 left
