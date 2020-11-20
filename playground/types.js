@@ -38,3 +38,11 @@
 
 // let somethingUndefined; // no value set to it 
 // const somethingNull =  null // value equals to nothing 
+
+// Boolean true or false
+// let isDrawing = false;
+// const age = 18;
+// const age2 = 18;
+// const ofAge = age > 19;
+// console.log(ofAge); //false
+// console.log(age === age2); // true
