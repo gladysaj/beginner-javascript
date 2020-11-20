@@ -23,3 +23,11 @@ const result = Math.floor(eachKidGets);
 console.log(result);
 
 const smartiesLeft = smarties % kids; // this will be the modulus op with 2 left
+
+// Objects 
+const person = {
+  name: 'Gladys',
+  age: 27,
+};
+
+person.name;
