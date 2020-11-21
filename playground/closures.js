@@ -1,0 +1,1 @@
+/* Closure: the hability to access a parent level scope 
