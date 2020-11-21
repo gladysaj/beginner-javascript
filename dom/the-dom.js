@@ -29,3 +29,20 @@
 
 // // pizzaList.textContent = `${pizzaList.textContent} pizza-emoji`; 
 // pizzaList.insertAdjacentText('beforeend', 'pizza-emoji');
+
+// CLASSES
+
+const pic = document.querySelector(.nice);
+// to be able to add or remove clases from the html
+pic.classList.add('open');
+pic.classList.remove('cool');
+pic.classList.add('round');
+pic.classList.toggle('round'); // this will add or remove it depends which value is there
+pic.classList.contains('round'); // return boolean
+console.log(pic).classList; // this will return a DOMtokenlist
+
+function toggleRound(){
+  pic.classList.toggle('round');
+};
+
+pic.addEventListener('click', toggleRound);
