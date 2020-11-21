@@ -46,3 +46,22 @@ function toggleRound(){
 };
 
 pic.addEventListener('click', toggleRound);
+
+pic.alt = 'Cute pic';
+pic.width = 200;
+
+window.addEventListener('load', function() {
+  console.log(pic.naturalWidth);
+});
+
+// This form is used to attributes that are not standard 
+pic.setAttribute('alt', 'Really cute pic');
+console.log(pic.getAttribute('alt'));
+
+// Set data attribute 
+const custom = document.querySelector('.custom');
+console.log(custom.dataset); // this will return all the values added in the data attributes 
+
+custom.addEventListener('click', function(){
+  alert(`Welcome ${custom.dataset.name} ${custom.dataset.last}`)
+});
