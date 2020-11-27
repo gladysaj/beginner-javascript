@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>If Statements</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <h2>truthy values</h2>
+     - 1
+     - 10
+     - full string 
+     - a string of "" or "0"
+     - empty array and object 
+
+  <h2>falsy values</h2>
+     - 0
+     - undefined
+     - null 
+     - a variable set to `"hello" -10`= NaN
+     - empty string 
+
+  <script>
+    const age = 27;
+    if (age > 20) {
+      console.log('You are old');
+    } else if (age > 25) {
+      console.log('You are cool');
+    } else if (age > 50) {
+      console.log('You are great');
+    } else {
+      console.log('nothing')
+    }
+
+    function slugify(sentence, lowercase) {
+      let slug = sentence.replace(/\s/g, '-');
+      if (lowercase) {
+        return slug.toLowerCase();
+      }
+      return slug;
+    }
+
+    const name = 'glad';
+    const last = 'gladys';
+
+    if (name === 'glad' && last === 'gladys') {
+      console.log('cool name');
+    }
+
+    const isAwesomeName = 'awesome'.includes(name);
+    if (isAwesomeName) {
+      console.log('super cool and awesome')
+    }
+
+    const score = 1;
+      if (score) {
+        console.log('there is a score already')
+      } else {
+        console.log('no score yet')
+      }
+
+      const values = [[], {}, -10, 1, 0, '', 'full string', ' ', undefined, NaN, null, '0️⃣', '💩'];
+
+    console.group('truthy or falsy values');
+    values.forEach(value => {
+      if (value) {
+        console.log(value, 'is truthy');
+      } else {
+        console.log(value, 'is falsy');
+      }
+    });
+    console.groupEnd();
+
+  </script>
+</body>
+
+</html>
