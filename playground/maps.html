@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Maps</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <ul class="prizes"></ul>
+  <script>
+    const person1 = {
+      name: 'glad',
+      age: 27,
+    }
+    
+    const myMap = new Map();
+    //.set()
+    myMap.set('name', 'gladys');
+    myMap.set(100, 'This is a number');
+    myMap.set(person1, 'really cool');
+    console.log(myMap); 
+
+    const score = 100;
+    const prizes = new Map();
+    prizes.set(100, 'bear')
+    prizes.set(200, 'duck')
+    prizes.set(300, 'dog')
+    console.log(`you win a ${prizes.get(score)}`);
+
+    // select the ul 
+    const ul = document.querySelector('.prizes');
+    // this way just shows the value: bear, duck, dog
+    // prizes.forEach(entry => {
+    //   console.log(entry);
+    // });
+ 
+    // this way shows all, the key and the values in an array
+    // for (const prize of prizes) {
+    //   console.log(prize);
+    // };
+    
+    //another way 
+    // for (const [points, prize] of prizes) {
+    //   const li = `<li>${points} - ${prize}</li>`;
+    //   ul.insertAdjacentHTML('beforeend', li);
+    // }
+
+    // CONVERT OBJECT INTO STRING  (this doesn't work with Map())
+    // JSON.stringify(person);
+    // BACK TO OBJECT
+    // JSON.parse(person);
+
+    // get
+    console.log(myMap.get(person1));
+    //.has()
+    //.delete()
+
+  </script>
+</body>
+
+</html>
