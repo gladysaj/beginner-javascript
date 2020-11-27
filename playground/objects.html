@@ -10,6 +10,7 @@
 
 <body>
   <input type="text" name="first" value="glad">
+  <script src="https://unpkg.com/lodash"></script>
   <script>
     const age = 100;
    const person = {
@@ -48,10 +49,70 @@
    const name = nameInput.value;
    console.log(name);
 
-   console.log(delete person.dog)
+   console.log(delete person.dog);
 
+   let name1 = 'glad';
+   let name2 = 'glad';
+
+   console.log(name1 === name2);
+
+   // objects are not the same if they are compared even if they have the same values
+   const person1 = {
+     first: 'glad',
+     last: 'alv',
+     clothing: {
+       shirts: 10,
+       pants: 5,
+     }
+   };
+
+   const person2 = {
+     first: 'glad',
+     last: 'alv'
+   };
+
+  //  const person3 = person1; // this is not copying but instead is creating a variable for that object
+  //  person3.first = 'larry';
+  //  console.log(person3.first) // larry
+  //  console.log(person1.first) // larry also updated the person1
+
+   // spread to be able to copy the object 
+  //  const person3 = { ...person1 };
+  //  const person3 = Object.assign({}, person1) // old way to make a copy ob an object
    // Methods: a function that lives inside of an object
 
+   // LODASH UNPKG
+  const person3 = _.cloneDeep(person1);
+
+  // create just one object 
+  const meatInventory = {
+    bacon: 2,
+    sausage: 3,
+  };
+  const veggieInventory = {
+    lettuce: 2,
+    tomatoes: 3,
+  };
+  
+  const inventory = { 
+    ...meatInventory, 
+    ...veggieInventory,
+    oyster: 1 
+  };
+
+  // the last property can override if there is one repeated 
+  console.log(inventory);
+
+  function doStuff(data) {
+    data = 'something else';
+  };
+
+  // this modifies data that lives outside for the object
+  function doStuff2(data) {
+    data.tomatoes = 10000,
+  };
+
+  doStuff2(inventory);
 
   </script>
 </body>
