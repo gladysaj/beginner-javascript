@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <input type="text" name="first" value="glad">
+  <script>
+    const age = 100;
+   const person = {
+     name: 'Gladys',
+     age: age,
+     'cool-guy': true,
+     'really-cool': false,
+     dog: 'snickers',
+     clothing: {
+       shirts: 10,
+       pants: 2,
+     },
+     sayHello: function(greeting = 'Hi') {
+        return `${greeting} ${this.name}`;
+     },
+     sneeze: () => {
+       console.log('ahhh chooo')
+     }
+   };
+   person.job = 'web dev';
+   person.age = 50; // override is possible in an object
+   console.log(person);
+
+   // freeze an object so it cannnot be changed 
+   const gladFroze = Object.freeze(person);
+   console.log(gladFroze);
+   
+   // way to access properties
+   console.log(person.age);
+   // one level deep
+   console.log(person.clothing.shirts);
+   console.log(person['age']); // square brackets to reference the name of a variable 
+
+   const nameInput = document.querySelector('[name="first"]');
+
+   const name = nameInput.value;
+   console.log(name);
+
+   console.log(delete person.dog)
+
+   // Methods: a function that lives inside of an object
+
+
+  </script>
+</body>
+
+</html>
