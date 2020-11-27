@@ -10,18 +10,18 @@
 
 <body>
   <h2>truthy values</h2>
-     - 1
+     <!-- - 1
      - 10
      - full string 
      - a string of "" or "0"
-     - empty array and object 
+     - empty array and object  -->
 
   <h2>falsy values</h2>
-     - 0
+     <!-- - 0
      - undefined
      - null 
      - a variable set to `"hello" -10`= NaN
-     - empty string 
+     - empty string  -->
 
   <script>
     const age = 27;
@@ -73,6 +73,61 @@
       }
     });
     console.groupEnd();
+
+    // Coercion
+    const isCool = true;
+
+    if (!isCool) {
+      console.log('you are not cool')
+    }
+
+    // ternary 
+    // const count = 2;
+    // let word; 
+    // if (count === 1) {
+    //   word = 'item';
+    // } else {
+    //   word = 'items';
+    // }
+
+    // condition , what to do if true and if false
+    const word = count === 1 ? 'item' : 'items';
+
+    const sentence = `you have ${count} ${word} in your card`;
+
+    // another option 
+    const sentence = `you have ${count} item${count === 1 ? '' : 's'} in your cart`;
+    console.log(sentence)
+
+    function showAdminBar(){
+      const isAdmin = true;
+      isAdmin ? showAdminBar() : null;
+    }
+
+    // AND AND trick
+    function check1(){
+      return true;
+    }
+
+    function check2(){
+      return true;
+    }
+
+    function check3(){
+      return true;
+    }
+
+    if (check1() && check2() && check3()){
+      console.log('all checks passed')
+    } else {
+      console.log('some checks failed')
+    }
+
+    // conditional abuse
+    isAdmin ? showAdminBar() : null;
+    isAdmin && showAdminBar();
+
+    if (isAdmin) { showAdminBar() };
 
   </script>
 </body>
