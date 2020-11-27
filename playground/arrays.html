@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>
+
+  </title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+<script>
+  const names = ['gladys', 'wes', 'tom', 'wwes', 'ttom'];
+  // typeof names = object
+  // Array.isArray(names) = true
+  // console.log(names[0]);
+  // console.log(names.length);
+  // access the last one 
+  // console.log(names[names.length - 1])
+
+  // MUTATION METHODS 
+  const numbers = [1,2,3,4,5];
+  // splice method 
+  // numbers.splice(3,2); // this will return a new array deleting the values  
+  // console.log(numbers)
+
+  // anytime you want to use a mutation method and not mutate the original array 
+  // we need to take a copy of the original array
+  // const numbersReversed = [...numbers];
+  // numbersReversed.reverse();
+  // const numbersBackwards = numbers.reverse(); // the original array was changed too backwards
+  // console.log(numbersBackwards);
+
+  // IMMUTABLE  (start and stop) parameters
+  // const pizzaSlice = numbers.slice(2,4) 
+  // console.log(pizzaSlice);
+
+  // ADD ITEMS TO AN ARRAY
+  // add to the end 
+  names.push('lux');
+  console.log(names);
+  const names2 = [...names, 'lux'];
+
+  // add to the front
+  names.unshift('poppy');
+  console.log(names);
+  const names3 = ['poppy', ...names];
+  console.log(names3) 
+  
+  // add to the middle
+  const bikes = ['bianchi', 'miele', 'panasonic', 'miyata'];
+  const newBikes = [
+    ...bikes.slice(0, 2),
+    'benoto',
+    ...bikes.slice(2)
+   ];
+   console.log(newBikes);
+
+   const newBikes2 = [
+     ...newBikes.slice(0,3),
+     ...newBikes.slice(4)
+   ];
+   console.log(newBikes2);
+
+   const comments = [
+     { text: 'Cool beans', id: 123 },
+     { text: 'Cool b', id: 223 },
+     { text: 'Coolns', id: 323 },
+     { text: 'Coos', id: 423 },
+     { text: 'Co', id: 523 },
+   ];
+
+   function deleteComment(id, comments) {
+     // find the index of the item in the array
+    const commentIndex = comments.findIndex(comment => comment.id === id);
+    return [
+       ...comments.slice(0, commentIndex),
+       ...comments.slice(commentIndex + 1)
+    ]
+     // make a new array without that item in it 
+     // return our new array
+   }
+
+  //  const gladysIndex = names.findIndex(name => {
+  //     if (name === 'gladys') {
+  //     return true;
+  //  } else {
+  //    return false;
+  //  });
+
+  // another way to do it
+  const gladysIndex = names.findIndex(name => name === 'gladys');
+  const newNamesWithoutGladys = [
+    // get everything up to gladys index
+    ...names.slice(0, gladysIndex)
+    // everything after gladys's name 
+    ...names.slice(gladysIndex + 1)
+  ];
+  
+   console.log(newNamesWithoutGladys);
+
+   console.log(gladysIndex);
+   console.log(names[gladysIndex]);
+
+</script>
+</body>
+
+</html>
