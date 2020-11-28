@@ -173,8 +173,8 @@ const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado
 // const orderTotalsWithTax = orderTotals.map(total => total * 1.13);
 
 // Working with objects
-// const cleanPeople = people.map(function(person) {
-//   // timestamp
+const cleanPeople = people.map(function(person) {
+  // timestamp
 //   const birthday = new Date(person.birthday).getTime();
 //   // now timestamp
 //   const now = Date.now();
@@ -187,3 +187,33 @@ const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado
 //     name: `${person.names.first} ${person.names.last}`;
 //   }
 // });
+
+// console.table(cleanPeople);
+
+// FILTER
+// const over40 = cleanPeople.filter(function(person) {
+//   if(person.age > 40) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// });
+
+// implicit return example 
+// const over40 = cleanPeople.filter(person => person.age > 40);
+
+
+// // FIND 
+// function findById(id) {
+//   return function isStudent(student) {
+//     return student.id === id;
+// });
+
+// function findByProp(prop, propWeAreLookingFor) {
+//   return function isStudent(student) {
+//     return student[prop] === propWeAreLookingFor;
+//   }
+// }
+
+// const student = students.find(findById('565a'));
+// console.log(student);
