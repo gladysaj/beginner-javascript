@@ -121,29 +121,69 @@ const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado
 //   console.log(topping);
 // });
 
-function logTopping(topping, index, originalArray) {
-  const nextTopping = originalArray[index + 1];
-  const prevTopping = originalArray[index - 1];
-    // console.log(topping);
+// function logTopping(topping, index, originalArray) {
+//   const nextTopping = originalArray[index + 1];
+//   const prevTopping = originalArray[index - 1];
+//     // console.log(topping);
   
-// log the topping
-console.log(topping);
+// // log the topping
+// console.log(topping);
 
-// log the previous topping if there is one
-prevTopping ? console.log(prevTopping) : null;  
+// // log the previous topping if there is one
+// prevTopping ? console.log(prevTopping) : null;  
 
-// log the next topping 
-// using ternary
-nextTopping ? console.log(nextTopping) : null;
-// another way
-// if (nextTopping) {
-//   console.log(nextTopping);
-// }
-// console.log(originalArray[index + 1])
+// // log the next topping 
+// // using ternary
+// nextTopping ? console.log(nextTopping) : null;
+// // another way
+// // if (nextTopping) {
+// //   console.log(nextTopping);
+// // }
+// // console.log(originalArray[index + 1])
 
 
-// if it is the last item in the array say goodbye
-index === originalArray.length - 1 ? console.log('goodbye') : console.log('getting the next topping');
-} 
+// // if it is the last item in the array say goodbye
+// index === originalArray.length - 1 ? console.log('goodbye') : console.log('getting the next topping');
+// } 
 
-toppings.forEach(logTopping);
+// toppings.forEach(logTopping);
+
+
+// MAP, FILTER, REDUCE
+
+// function addArms(face) {
+//   return ` hand ${face} another hand`
+// };
+
+// const toys = faces.map(addArms);
+// console.log(toys);
+
+// // adding the lastname
+// function bosify(name) {
+//   return `${name} Bos`;
+// };
+
+// function capitalize(word) {
+//   return `${word[0].toUpperCase()}{$word.slice(1)};
+// };
+
+// const fullNames = ['glad', 'ys', 'poppy'].map(capitalize).map(bosify);
+// console.log(fullNames);
+
+// const orderTotalsWithTax = orderTotals.map(total => total * 1.13);
+
+// Working with objects
+// const cleanPeople = people.map(function(person) {
+//   // timestamp
+//   const birthday = new Date(person.birthday).getTime();
+//   // now timestamp
+//   const now = Date.now();
+//   const age = Math.floor((now - birthday) / 31536000000);
+//   // get their birthday
+//   // figure out how old they are
+//   // return their full name and bday in an object 
+//   return {
+//     age: age;
+//     name: `${person.names.first} ${person.names.last}`;
+//   }
+// });
