@@ -217,3 +217,32 @@ const cleanPeople = people.map(function(person) {
 
 // const student = students.find(findById('565a'));
 // console.log(student);
+
+// REDUCE 
+
+// let total = 0;
+// orderTotals.forEach(singleTotal => {
+//   total = total + singleTotal;
+// });
+
+// function tallyNumbers(tally, currentTotal) {
+//   console.log(`The current tally is ${tally}`);
+//   console.log(`The current total is ${currentTotal}`);
+//   // return the current tally plus the amount of this order 
+//   return tally + currentTotal;
+// };
+
+// const allOrders = orderTotals.reduce(tallyNumbers, 0);
+
+// function inventoryReducer(totals, item) {
+//    console.log(`Looping over ${item.type}`);
+
+//    // increment the type by one 
+//    totals.shirt = totals.shirt + 1 || 1;
+//    // return the totals so the next loop can use it 
+// }
+
+// const inventoryCounts = inventory.reduce(inventoryReducer, {});  
+
+
+// const totalInventory = inventory.reduce((acc, item) => acc + item.price, 0);
