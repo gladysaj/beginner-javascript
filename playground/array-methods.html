@@ -80,23 +80,54 @@
     */
 
     // Display all bun types with " or " - use join()
+    // console.log(buns.join(' or '));
 
     // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
+    const foodString = "hot dogs, hamburgers, sausages, corn";
+    console.log(foodString.split(','))
 
-    // take the last item off toppings with pop()
+    // take the last item off toppings with pop() - last item of array and mutates the array
+    const lastItem = console.log(toppings.pop()); 
+
     // add it back with push()
-    // take the first item off toppings with shift()
-    // add it back in with unshift()
-    // Do the last four,but immutable (with spreads and new variables)
+    console.log(toppings.push(lastItem));
 
+    // take the first item off toppings with shift()
+    const firstItem = console.log(toppings.shift());
+
+    // add it back in with unshift()
+    console.log(toppings.unshift(firstItem));
+     
+    // Do the last four,but immutable (with spreads and new variables)
+    let newToppings = toppins.slice(0, toppings.length - 1);
+    newToppings = [...newToppings, toppings[toppings.length - 1 ]];
 
     // Make a copy of the toppings array with slice()
+    const toppingsCopy = toppings.slice(0);
+    toppings[0] = 'boys';
+
     // Make a copy of the toppings array with a spread
+    const toppingsCopy2 = [...toppings]; 
+
     // take out items 3 to 5 of your new toppings array with splice()
+    toppingsCopy.splice(3,5);
+    console.log(toppingsCopy)
+
     // find the index of Avocado with indexOf() / lastIndexOf()
+    const avoIndex = toppings.indexOf('Avocado')
+
     // Check if hot sauce is in the toppings with includes()
+    const isInToppings = toppings.includes('hot sauce');
+
     // add it if it's not
+    if (!isInToppings) {
+      toppings.push('hot sauce')
+    };
+    console.log(isInToppings); 
+
     // flip those toppings around with reverse()
+    toppings.reverse(); // mutable 
+    const toppingsReverse = [...toppings].reverse(); // immutable
 
     /*
       Callback Methods
